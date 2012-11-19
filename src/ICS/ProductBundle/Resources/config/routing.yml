@@ -1,0 +1,3 @@
+ICSProductBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ICSProductBundle:Default:index }
