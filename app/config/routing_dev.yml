@@ -1,5 +1,5 @@
 _welcome:
-    pattern:  /
+    pattern:  /Symfony
     defaults: { _controller: AcmeDemoBundle:Welcome:index }
 
 _demo_secured:
@@ -10,6 +10,10 @@ _demo:
     resource: "@AcmeDemoBundle/Controller/DemoController.php"
     type:     annotation
     prefix:   /demo
+
+_assetic:
+    resource: .
+    type:     assetic
 
 _wdt:
     resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
@@ -25,3 +29,8 @@ _configurator:
 
 _main:
     resource: routing.yml
+
+ActivDevNoclineBundle:
+  resource: "@ActivDevNoclineBundle/Controller/"
+  type: annotation
+  prefix: /_nocline_ 

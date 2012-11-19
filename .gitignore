@@ -12,3 +12,14 @@ web/bundles/*
 app/config/parameters.ini
 app/config/parameters.yml
 /nbproject/private/
+!/vendor/assetic/
+!/vendor/swiftmailer/
+!/vendor/doctrine-dbal/
+!/vendor/metadata/
+!/vendor/monolog/
+!/vendor/symfony/
+!/vendor/twig/
+!/vendor/doctrine/
+!/vendor/doctrine-common/
+!/vendor/twig-extensions/
+!/vendor/bundles/
