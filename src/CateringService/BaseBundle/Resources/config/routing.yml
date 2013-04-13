@@ -1,0 +1,4 @@
+cateringservice_base_controller:
+    resource: "@CateringServiceBaseBundle/Controller/"
+    type:     annotation 
+    prefix:   /
