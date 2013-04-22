@@ -1,0 +1,59 @@
+{# bot_content #}
+<div class="bot_content" style="background-color:#e5e3eb; background-image:url(images/pattern_1.png)">
+    <div class="bot_content_inner">
+        <div class="container_12">
+            <div class="grid_8">
+                <div class="promo_list">
+                    <h3>LATEST PROMOS</h3>
+                    <div class="slides_container">
+                        <div class="slide">
+                            <div class="slide_title"><strong>Happy Hour, between <em>4pm</em> <span>&</span> <em>5pm</em></strong></div>
+                            <div class="slide_text">
+                                <div class="slide_image"><img src="{{ asset('images/temp/promo_1.png')}}" width="130" height="110" alt=""></div>
+                                <p>Etiam at risus et justo dignissim congue. Donec cone lacinia dui, a potitor lec tus condimentum lao. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. <a href="menus.html" class="link-more">FIND OUT MORE!</a></p>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide_title"><strong>Menu of the Day: <span>starting from</span> <em>$23</em></strong></div>
+                            <div class="slide_text">
+                                <div class="slide_image"><img src="{{ asset('images/temp/promo_2.png')}}" width="130" height="110" alt=""></div>
+                                <p>Our Menu of the Day includes in pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia. And much more...<a href="menus.html" class="link-more">FIND OUT MORE!</a></p>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                                                              jQuery(document).ready(function($) {
+                                                                              $('.promo_list').slides({
+                                                                                      play: 6000,
+                                                                                      pause: 5000,
+                                                                                      hoverPause: true,
+                                                                                      generatePagination: false,
+                                                                                      generateNextPrev: true,
+                                                                                      slideSpeed: 700,
+                                                                                      slideEasing: 'easeOutCubic',
+                                                                                      autoHeight: true
+                                                                              });						
+                                                              });
+                    </script> 
+                    {#/ promo list #} 
+
+            </div>
+            <div class="grid_4">
+                <div class="widget-container newsletterBox">
+                    <div class="inner">
+                        <h3>SIGN-UP FOR NEWS</h3>
+                        <form method="get" action="#">
+                            <div class="newsletter_text">Stay in touch with the latest events & promos only by <strong>subscribing to our Newsletter:</strong></div>
+                            <input type="text" value="" name="email" class="inputField">
+                            <input type="submit" value="Send" class="btn-arrow">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

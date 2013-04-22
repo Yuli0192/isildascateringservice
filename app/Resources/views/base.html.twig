@@ -1,44 +1,70 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Isild`s - Catering Service{% endblock %}</title>
-        <link rel="stylesheet" href="{{ asset('css/prettyPhoto.css') }}" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('css/shCore.css') }}" type="text/css" />
-        <link rel="stylesheet" href="{{ asset('css/shThemeDefault.css') }}" type="text/css" />
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('images/icons/ico_title.ico') }}" />
+        <meta charset="utf-8">
+        <meta name="author" content="ThemeFuse">
+        <meta name="description" content="A short description of your company">
+        <meta name="keywords" content="Some keywords that best describe your business">
+        <title>COFFEE LOUNGE - Homepage</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400italic,400,700,700italic,900|Arizonia' rel='stylesheet' type='text/css'>
+        <link href="{{ asset('style.css')}}" media="screen" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="{{ asset('js/jquery.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/general.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.tools.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/slides.min.jquery.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.backgroundPosition.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/jquery.jcarousel.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset('images/skins/tango/skin.css')}}">
+
+        {#[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css><![endif]#}
+
+        <link href="{{ asset('custom.css')}}" media="screen" rel="stylesheet" type="text/css">
     </head>
+
     <body>
-        {% block body %}
-            <div class="body_wrap">
-                <div class="header">
-                    <div class="header_highlight">
-                        <div class="header_bot">
-                            <div class="container_12">
-                                <div class="topmenu">
-                                    <div class="logo">
-                                    </div>
+        <div class="body_wrap">
+            <div class="header" style="background-color:#8487aa; background-image:url({{asset('images/pattern_1.png')}})">
+                <div class="header_highlight">
+                    <div class="header_bot">
+                        <div class="container_12">
+                            <div class="topmenu">
+                                <div class="logo">
+                                    <a href="#">
+                                        <h1>CAFÉ  Lounge - bistro & cake shop</h1>
+                                    </a>
                                 </div>
+                                {# dropdown #} 
+                                {% block dropdown %}
+                                    {% include '::dropdown.html.twig' %}
+                                {% endblock %}
                             </div>
+
+                            {# headerSlider #} 
+                            {% block headerSlider %}
+                                {% include '::headerSlider.html.twig' %}
+                            {% endblock %}
                         </div>
                     </div>
                 </div>
             </div>
-        {% endblock %}
-          <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/general.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/jquery.backgroundPosition.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/jquery.gmap.min.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/jquery.jcarousel.min.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/jquery.preloadify.min.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/jquery.prettyPhoto.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/jquery.tools.min.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/shBrushPlain.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/shCore.js') }}"></script>
-          <script type="text/javascript" src="{{ asset('js/slides.min.jquery.js') }}"></script>
-        {% block javascripts %}{% endblock %}
+            {#/ header #}
+            
+            <div class="middle">
+            {# middle #} 
+            {% block middle %}
+            {% endblock %}
+            </div>
+                
+            {# botContent #} 
+            {% block botContent %}
+                {% include '::botContent.html.twig' %}
+            {% endblock %}
+
+            {# footer #} 
+            {% block footer %}
+                {% include '::footer.html.twig' %}
+            {% endblock %}
+        </div>
     </body>
 </html>

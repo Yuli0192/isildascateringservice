@@ -1,8 +1,50 @@
 {% extends '::base.html.twig' %}
-{% block stylesheets %}
+
+{% block middle %}
+<div class="container_12"> 
+    {# menu_list with round images #}
+    <div class="menu_circle">
+        <ul id="menu_carousel" class="jcarousel-skin-tango">
+            <li>
+                <div class="menu_title">
+                    <h2>Drinks & Sweets Menu</h2>
+                    <p>Take a look at our gourmet menu, full of delicious offerings & tough choices</p>
+                </div>
+                <div class="circle" style="background-image:url(images/temp/menu_1.jpg)"><a class="caption" href="menus.html"><span>View the menu</span></a></div>
+            </li>
+            <li>
+                <div class="menu_title">
+                    <h2>Picture Gallery</h2>
+                    <p>See inside our Coffee Shop and find out why everyone's talking about us</p>
+                </div>
+                <div class="circle" style="background-image:url(images/temp/menu_2.jpg);position:static"><a class="caption" href="portfolio.html"><span>View PHOTOS</span></a></div>
+            </li>
+            <li>
+                <div class="menu_title">
+                    <h2>Address & Location</h2>
+                    <p>Find us easily at Plaza de Espana, 14, Seville, Andalucia. <a href="#">VIEW MAP</a></p>
+                </div>
+                <div class="circle">
+                    <iframe style="z-index:999" id="map" Name="mapFrame" scrolling="no" width="262" height="262" frameborder="0" src="{{ asset('http://www.bing.com/maps/embed/?lvl=15&amp;cp=37.37755646639831~-5.98619370205808&amp;sty=r&amp;draggable=false&amp;v=2&amp;dir=0&amp;where1=Seville%2C+Andalusia%2C+Spain&amp;form=LMLTEW&amp;pp=37.387908935546875~-6.001959800720215&amp;mkt=en-us&amp;emid=2d0e38c8-6443-68d4-fcd1-99ac38329e0c&amp;w=262&amp;h=262')}}"></iframe>
+                    <a class="caption" style="margin-top:-267px" href="location.html"><span>View ON MAP</span></a></div>
+            </li>
+        </ul>
+        <div class="clear"></div>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {						
+                $(".menu_circle li .circle").mouseover(function(){
+                                $(this).children().stop().animate({backgroundPosition: '0 185'},{queue:false, duration:450, easing: 'easeOutBack'});
+                                $(this).children().children().stop().animate({top: "210",fontSize: "13px"},{queue:false, duration:350, easing: 'easeOutBack'});							
+                        }).mouseout(function(){			
+                                $(this).children().stop().animate({backgroundPosition: '0 205'},{queue:false, duration:450, easing: 'easeOutBack'});
+                                $(this).children().children().stop().animate({top: "220",fontSize: "11px"},{queue:false, duration:350, easing: 'easeOutBack'});
+                });
+            });
+        </script> 
+    </div>
+    {#/ menu_list with round images #} 
+</div>
+
 {% endblock %}
-{% block body %}
-    {{ parent() }}
-holaaaaa... 
-{% endblock %}
- 
+                    
+

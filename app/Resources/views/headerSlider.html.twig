@@ -1,0 +1,59 @@
+{# header slider #}
+<div class="header_slider">
+    <div class="slides_container">
+        <div class="slide">
+            <div class="slide_image"><img src="{{ asset('images/temp/slider_img_1.png')}}" width="442" height="327" alt=""></div>
+            <div class="slide_text">
+                <p class="slide_title"><strong>Delicious sweets & cake couture</strong></p>
+                <p>Indulge your tastebuds with some of the best sweets in town! From cupcakes to strawberry mousse, we have them all! <a href="menus.html" class="link-more">FIND OUT MORE!</a></p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide_image"><img src="{{ asset('images/temp/slider_img_2.png')}}" width="442" height="327" alt=""></div>
+            <div class="slide_text">
+                <p class="slide_title"><strong>Fresh grinded coffee & hot drinks</strong></p>
+                <p>Gourmet coffee grinded from only the most tasty beans on earth, selected for a great mixture of fresh and exotic taste! <a href="menus.html" class="link-more">FIND OUT MORE!</a></p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide_image"><img src="{{ asset('images/temp/slider_img_3.png')}}" width="442" height="327" alt=""></div>
+            <div class="slide_text">
+                <p class="slide_title"><strong>Cocktails & alcoholic drinks</strong></p>
+                <p>We've also got a wide range of large alcoholic cocktails and strong drinks, served cold as ice! For more details, <a href="menus.html" class="link-more">FIND OUT MORE!</a></p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide_image">
+                <img src="{{ asset('images/temp/slider_img_4.png')}}" width="442" height="327" alt="">
+            </div>
+            <div class="slide_text">
+                <p class="slide_title"><strong>World famous Club Sandwich</strong></p>
+                <p>Tasty snack that will make you wonder how it was made. Make no mistake: <br>
+                    this is not your regular Club Sandwich! <a href="#" class="link-more">FIND OUT MORE!</a></p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="slide_image">
+                <img src="images/temp/slider_img_5.png')}}" width="442" height="327" alt="">
+            </div>
+            <div class="slide_text">
+                <p class="slide_title"><strong>Soft Drinks & Sweet Cocktails</strong></p>
+                <p>We've also got a wide range of non-alcoholic cocktails and strong drinks, served cold as ice! For more details, <a href="menus.html" class="link-more">FIND OUT MORE!</a></p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('.header_slider').slides({
+                    play: 4000,
+                    pause: 3500,
+                    hoverPause: true,
+                    generateNextPrev: true,
+                    slideSpeed: 700,
+                    slideEasing: 'easeOutCubic'
+            });
+            $('.header_slider .pagination li a').text(function(i,txt) { var c = parseInt(txt, 10); return (c<10) ? "0"+c : c; });
+        });
+    </script> 
+</div>
+{#/ header slider #} 
